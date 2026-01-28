@@ -27,6 +27,7 @@ namespace tiendaAPI.Data
             modelBuilder.Entity<Producto>()
                 .HasOne(p=>p.Proveedor)
                 .WithMany(p => p.Productos)
+                .HasPrincipalKey(p => p.Codigo)
                 .HasForeignKey(p => p.CodigoProveedor)
                 .OnDelete(DeleteBehavior.Restrict); //Para que no sea estricto al borrar
             /*El HasOne significa que tendrá un Único proveedor, que es P, en donde P es igual a la propiedad de NAVEGACIÓN

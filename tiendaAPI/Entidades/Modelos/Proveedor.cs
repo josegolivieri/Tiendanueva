@@ -12,5 +12,6 @@
         //Esta propiedad sirve para decir si está activado o no, de momento no tiene relevancia técnica pero se usará para apagar
         //o encender el proveedor
         public bool Activado { get; set; } = true;
+        
     }
 }

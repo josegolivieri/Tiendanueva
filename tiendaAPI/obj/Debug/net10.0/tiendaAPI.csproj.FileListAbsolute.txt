@@ -156,3 +156,4 @@ C:\Users\Manuel Darío\Desktop\Tiendanueva\tiendaAPI\obj\Debug\net10.0\refint\ti
 C:\Users\Manuel Darío\Desktop\Tiendanueva\tiendaAPI\obj\Debug\net10.0\tiendaAPI.pdb
 C:\Users\Manuel Darío\Desktop\Tiendanueva\tiendaAPI\obj\Debug\net10.0\tiendaAPI.genruntimeconfig.cache
 C:\Users\Manuel Darío\Desktop\Tiendanueva\tiendaAPI\obj\Debug\net10.0\ref\tiendaAPI.dll
+C:\Users\Manuel Darío\Desktop\Tiendanueva\tiendaAPI\obj\Debug\net10.0\tiendaAPI.sourcelink.json
