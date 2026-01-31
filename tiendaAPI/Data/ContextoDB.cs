@@ -18,10 +18,18 @@ namespace tiendaAPI.Data
 
             //Proveedores
             modelBuilder.Entity<Proveedor>()
+                .Property(p => p.Codigo);
+
+            modelBuilder.Entity<Proveedor>()
                 .HasIndex(p => p.Codigo)
                 .IsUnique();
             /*HasIndex siginica que utilizará esa propiedad como índice, y, que además, tiene que ser única*/
-
+            
+            
+            //Categories
+            modelBuilder.Entity<Categoria>()
+            .HasIndex(c => c.Nombre)
+            .IsUnique();
 
             //Productos
             modelBuilder.Entity<Producto>()
@@ -29,7 +37,8 @@ namespace tiendaAPI.Data
                 .WithMany(p => p.Productos)
                 .HasPrincipalKey(p => p.Codigo)
                 .HasForeignKey(p => p.CodigoProveedor)
-                .OnDelete(DeleteBehavior.Restrict); //Para que no sea estricto al borrar
+                .OnDelete(DeleteBehavior.Restrict); 
+            //Para que no sea estricto al borrar
             /*El HasOne significa que tendrá un Único proveedor, que es P, en donde P es igual a la propiedad de NAVEGACIÓN
              P.Proveedor, y que puede tener, muchos productos
             HasForeignKey, significa que, en el modelo, la propiedad CodigoProveedor trabaja como clave foránea*/
@@ -41,13 +50,13 @@ namespace tiendaAPI.Data
             modelBuilder.Entity<Producto>()
                 .HasOne(p => p.Categoria)
                 .WithMany(c => c.Productos)
-                .HasForeignKey(p => p.Id);
+                .HasForeignKey(p => p.CategoriaId)
+                .OnDelete(DeleteBehavior.Restrict);
 
+            modelBuilder.Entity<Producto>()
+                .Property(p => p.Precio)
+                .HasPrecision(18, 2);
 
-            //Categories
-            modelBuilder.Entity<Categoria>()
-            .HasIndex(c => c.Nombre)
-            .IsUnique();
 
         }
     }

@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
 using tiendaAPI.Data;
 using tiendaAPI.Entidades.Modelos;
 using tiendaAPI.Interfaces;
@@ -12,6 +13,7 @@ namespace tiendaAPI.Services
 
         public async Task<Proveedor> CrearProveedor(Proveedor proveedor)
         {
+            await ValidarDatos(proveedor, banderaUpdate: false);
             await _contexto.Proveedores.AddAsync(proveedor);
             await _contexto.SaveChangesAsync();
             return proveedor;
@@ -19,31 +21,26 @@ namespace tiendaAPI.Services
         public async Task<IEnumerable<Proveedor>> VerTodosLosProveedores()
         {
             return await _contexto.Proveedores
-                //.Include(p => p.Productos)
+                .AsNoTracking()
                 .Where(p => p.Activado == true)
                 .ToListAsync();
         }
         public async Task<Proveedor?> ObtenerProveedorPorId(int id)
         {
             return await _contexto.Proveedores
+                .AsNoTracking()
                 .Include(p => p.Productos)
                 .FirstOrDefaultAsync(p => p.Id == id);       
         }
 
-        public async Task<Proveedor> ActualizarProveedor(int id, string nuevoNombre, string nuevoCodigo)
+        public async Task<Proveedor> ActualizarProveedor(int id, string nuevoNombre)
         {
             var existeProveedor = await _contexto.Proveedores.FindAsync(id) ?? throw new InvalidOperationException($"Proveedor no encontrado.");
 
             existeProveedor.Nombre = nuevoNombre;
-            existeProveedor.Codigo = nuevoCodigo;
 
-            var CodigoEnUso = await _contexto.Proveedores.AnyAsync(p => p.Codigo == existeProveedor.Codigo && p.Id != existeProveedor.Id);
-            if (CodigoEnUso)
-            {
-                throw new InvalidOperationException($"El código '{existeProveedor.Codigo}' está en uso.");
-            }
 
-            //_contexto.Entry(existeProveedor).CurrentValues.SetValues(existeProveedor);
+            await ValidarDatos(existeProveedor, banderaUpdate: true);
             await _contexto.SaveChangesAsync();
 
             return existeProveedor;
@@ -56,7 +53,7 @@ namespace tiendaAPI.Services
 
             existeProveedor.Activado = !existeProveedor.Activado;
             await _contexto.SaveChangesAsync();
-            return true;
+            return existeProveedor.Activado;
         }
 
         public async Task BorrarProveedor(int id)
@@ -69,5 +66,22 @@ namespace tiendaAPI.Services
 
         }
 
+
+        private async Task ValidarDatos(Proveedor proveedor, bool banderaUpdate)
+        {
+            if (string.IsNullOrWhiteSpace(proveedor.Nombre)) throw new InvalidOperationException("El campo nombre no puede estar vacío");
+            if (string.IsNullOrEmpty(proveedor.Codigo)) throw new InvalidOperationException("El codigo no puede estar vacío");
+
+            var codigoEnUso = await _contexto.Categorias.AnyAsync(p => p.Nombre.ToLower() == proveedor.Nombre.ToLower() && (!banderaUpdate || p.Id != proveedor.Id));
+
+            if (codigoEnUso) 
+            {
+                throw new InvalidOperationException($"El nombre '{proveedor.Nombre}' ya está en uso");
+            }
+        
+        
+        }
+
+        
     }
 }

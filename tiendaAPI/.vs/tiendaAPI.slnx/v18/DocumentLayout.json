@@ -11,8 +11,20 @@
       "RelativeMoniker": "D:0:0:{1ED809D6-6059-4959-37EA-063377F17A95}|tiendaAPI.csproj|solutionrelative:interfaces\\iproveedorinterfaz.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{1ED809D6-6059-4959-37EA-063377F17A95}|tiendaAPI.csproj|c:\\users\\manuel dar\u00EDo\\desktop\\tiendanueva\\tiendaapi\\entidades\\modelos\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1ED809D6-6059-4959-37EA-063377F17A95}|tiendaAPI.csproj|solutionrelative:entidades\\modelos\\producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1ED809D6-6059-4959-37EA-063377F17A95}|tiendaAPI.csproj|c:\\users\\manuel dar\u00EDo\\desktop\\tiendanueva\\tiendaapi\\entidades\\dto\\productodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1ED809D6-6059-4959-37EA-063377F17A95}|tiendaAPI.csproj|solutionrelative:entidades\\dto\\productodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{1ED809D6-6059-4959-37EA-063377F17A95}|tiendaAPI.csproj|c:\\users\\manuel dar\u00EDo\\desktop\\tiendanueva\\tiendaapi\\entidades\\modelos\\proveedor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1ED809D6-6059-4959-37EA-063377F17A95}|tiendaAPI.csproj|solutionrelative:entidades\\modelos\\proveedor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1ED809D6-6059-4959-37EA-063377F17A95}|tiendaAPI.csproj|c:\\users\\manuel dar\u00EDo\\desktop\\tiendanueva\\tiendaapi\\data\\contextodb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1ED809D6-6059-4959-37EA-063377F17A95}|tiendaAPI.csproj|solutionrelative:data\\contextodb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,19 +34,58 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ServiceProveedor.cs",
+              "DocumentMoniker": "C:\\Users\\Manuel Dar\u00EDo\\Desktop\\Tiendanueva\\tiendaAPI\\Services\\ServiceProveedor.cs",
+              "RelativeDocumentMoniker": "Services\\ServiceProveedor.cs",
+              "ToolTip": "C:\\Users\\Manuel Dar\u00EDo\\Desktop\\Tiendanueva\\tiendaAPI\\Services\\ServiceProveedor.cs",
+              "RelativeToolTip": "Services\\ServiceProveedor.cs",
+              "ViewState": "AgIAADEAAAAAAAAAAAA0wFQAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-31T19:59:04.643Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "Producto.cs",
+              "DocumentMoniker": "C:\\Users\\Manuel Dar\u00EDo\\Desktop\\Tiendanueva\\tiendaAPI\\Entidades\\Modelos\\Producto.cs",
+              "RelativeDocumentMoniker": "Entidades\\Modelos\\Producto.cs",
+              "ToolTip": "C:\\Users\\Manuel Dar\u00EDo\\Desktop\\Tiendanueva\\tiendaAPI\\Entidades\\Modelos\\Producto.cs",
+              "RelativeToolTip": "Entidades\\Modelos\\Producto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-31T19:58:35.721Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ProductoDTO.cs",
+              "DocumentMoniker": "C:\\Users\\Manuel Dar\u00EDo\\Desktop\\Tiendanueva\\tiendaAPI\\Entidades\\DTO\\ProductoDTO.cs",
+              "RelativeDocumentMoniker": "Entidades\\DTO\\ProductoDTO.cs",
+              "ToolTip": "C:\\Users\\Manuel Dar\u00EDo\\Desktop\\Tiendanueva\\tiendaAPI\\Entidades\\DTO\\ProductoDTO.cs",
+              "RelativeToolTip": "Entidades\\DTO\\ProductoDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-31T19:57:50.499Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "Proveedor.cs",
               "DocumentMoniker": "C:\\Users\\Manuel Dar\u00EDo\\Desktop\\Tiendanueva\\tiendaAPI\\Entidades\\Modelos\\Proveedor.cs",
               "RelativeDocumentMoniker": "Entidades\\Modelos\\Proveedor.cs",
               "ToolTip": "C:\\Users\\Manuel Dar\u00EDo\\Desktop\\Tiendanueva\\tiendaAPI\\Entidades\\Modelos\\Proveedor.cs",
               "RelativeToolTip": "Entidades\\Modelos\\Proveedor.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-28T21:41:50.301Z",
+              "WhenOpened": "2026-01-31T19:49:49.145Z",
               "EditorCaption": ""
             },
             {
@@ -45,22 +96,22 @@
               "RelativeDocumentMoniker": "Interfaces\\IProveedorInterfaz.cs",
               "ToolTip": "C:\\Users\\Manuel Dar\u00EDo\\Desktop\\Tiendanueva\\tiendaAPI\\Interfaces\\IProveedorInterfaz.cs",
               "RelativeToolTip": "Interfaces\\IProveedorInterfaz.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-28T21:32:52.761Z",
+              "WhenOpened": "2026-01-31T18:33:17.861Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ServiceProveedor.cs",
-              "DocumentMoniker": "C:\\Users\\Manuel Dar\u00EDo\\Desktop\\Tiendanueva\\tiendaAPI\\Services\\ServiceProveedor.cs",
-              "RelativeDocumentMoniker": "Services\\ServiceProveedor.cs",
-              "ToolTip": "C:\\Users\\Manuel Dar\u00EDo\\Desktop\\Tiendanueva\\tiendaAPI\\Services\\ServiceProveedor.cs",
-              "RelativeToolTip": "Services\\ServiceProveedor.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAIwBsAAAAuAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "ContextoDB.cs",
+              "DocumentMoniker": "C:\\Users\\Manuel Dar\u00EDo\\Desktop\\Tiendanueva\\tiendaAPI\\Data\\ContextoDB.cs",
+              "RelativeDocumentMoniker": "Data\\ContextoDB.cs",
+              "ToolTip": "C:\\Users\\Manuel Dar\u00EDo\\Desktop\\Tiendanueva\\tiendaAPI\\Data\\ContextoDB.cs",
+              "RelativeToolTip": "Data\\ContextoDB.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-28T21:30:48.008Z",
+              "WhenOpened": "2026-01-31T18:05:07.941Z",
               "EditorCaption": ""
             }
           ]

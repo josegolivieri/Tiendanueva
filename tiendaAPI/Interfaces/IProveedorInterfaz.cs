@@ -16,7 +16,7 @@ namespace tiendaAPI.Interfaces
         Task<Proveedor?> ObtenerProveedorPorId(int id);
         //Task para actualizar, devuelve proveedor, recibe int id para UBICAR AL PROVEEDOR, y las dos
         //parámetros de tipo string son para actualizar los datos
-        Task<Proveedor> ActualizarProveedor(int id, string nuevoNombre, string nuevoCodigo);
+        Task<Proveedor> ActualizarProveedor(int id, string nuevoNombre);
         //Esta únicamente se mete en la propiedad del proveedor llamado ACTIVADO, y cambia su estado
         //Si está true, lo cambia a false, y viceversa
         Task<bool> CambiarEstado(int id);

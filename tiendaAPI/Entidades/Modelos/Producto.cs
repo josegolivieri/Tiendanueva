@@ -25,9 +25,10 @@ namespace tiendaAPI.Entidades.Modelos
         /*La categoriaId es propiedad de enlace, es tipo conceptual, me sirve para enlazar cateogorías con productos
          Y, public Categoria es de tipo navegación, la utiliza EF Core para mapear las tablas, y, con el signo de interrogación
         deja permitido que su valor sea nulo. El =null! significa que no será null, es una promesa que puede o no puede ser cierta*/
-        public int? CategoriaId { get; set; }
+        public int CategoriaId { get; set; }
         //POSIBLEMENTE, necesite JSONIGNORE
-        public Categoria? Categoria { get; set; } = null!;
+        [JsonIgnore]
+        public Categoria Categoria { get; set; } = null!;
 
 
         [Display(Name = "Image")]
